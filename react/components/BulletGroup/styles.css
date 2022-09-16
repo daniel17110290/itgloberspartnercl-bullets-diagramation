@@ -1,3 +1,4 @@
+
 .bullet__container{
     display: flex;
     overflow: auto;
@@ -15,6 +16,7 @@
 .bullet__container::-webkit-scrollbar-thumb{ 
     background-color: rgb(230, 39, 70);
 }
+
 .bullet_item{
     margin-right: 15px;
 }
@@ -25,7 +27,9 @@
 }
 .bullet_item--image{
     width: 80px;
+
     min-width: 80px
+
     
 }
 .bullet_item--link{
@@ -36,6 +40,8 @@
     .bullet_item,
     .bullet_item--image{
         width: 100px;
+
         min-width: 100px
+
     }   
 }

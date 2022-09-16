@@ -30,9 +30,11 @@ const BulletGroup = ({
       {
         isMobile
           ?
+
           <div className={handles.bullet__container}>
             {bulletsContent}
           </div>
+
           :
           children
       }
