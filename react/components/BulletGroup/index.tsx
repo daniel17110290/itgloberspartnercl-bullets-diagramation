@@ -3,6 +3,7 @@ import { BulletsSchema } from "./BulletTypes"
 import { useDevice } from "vtex.device-detector"
 import { useListContext, ListContextProvider } from "vtex.list-context"
 import { getBulletsAsTSXList } from "./modules/bulletsAsList"
+import { useCssHandles } from "vtex.css-handles"
 
 export interface BulletsGroupProps {
   bullets: BulletsSchema
@@ -21,16 +22,19 @@ const BulletGroup = ({
   const bulletsContent = getBulletsAsTSXList(bullets)
   const newListContextValue = list.concat(bulletsContent)
 
-  if (false) {
-    console.log(children, list)
-  }
+  const CSS_HANDLES = ["bullet__container"]
 
+  const handles = useCssHandles(CSS_HANDLES)
   return (
     <ListContextProvider list={newListContextValue}>
       {
         isMobile
           ?
-          <div>{bulletsContent}</div>
+
+          <div className={handles.bullet__container}>
+            {bulletsContent}
+          </div>
+
           :
           children
       }
