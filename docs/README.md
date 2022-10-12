@@ -1,4 +1,4 @@
-# :bulb: filters custom
+# :bulb: custom diagramation
 ![image](https://user-images.githubusercontent.com/96321122/195446697-1817401f-9125-4b5e-98cd-ce4c430a3a22.png)
 
 
